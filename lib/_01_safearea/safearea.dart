@@ -9,6 +9,11 @@ class SafeAreaPageState extends State<SafeAreaPage> {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
+
+//    return SafeArea(
+//      child: Container(color: Colors.green),
+//    );
+
     return SafeArea(
       child: Material(
         child: Center(
@@ -35,5 +40,4 @@ class SafeAreaPageState extends State<SafeAreaPage> {
       ),
     );
   }
-
 }
