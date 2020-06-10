@@ -9,7 +9,8 @@ class HomePageState extends State<HomePage> {
 
   List<String> _menuList = [
     'safearea',
-    'expanded'
+    'expanded',
+    'wrap',
   ];
 
   @override

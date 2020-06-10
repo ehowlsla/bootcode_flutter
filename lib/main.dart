@@ -16,10 +16,6 @@ void main() {
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
 
-  List<String> menuList = [
-    'safearea'
-  ];
-
 
   @override
   Widget build(BuildContext context) {
