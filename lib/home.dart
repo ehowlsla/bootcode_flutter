@@ -8,7 +8,8 @@ class HomePage extends StatefulWidget {
 class HomePageState extends State<HomePage> {
 
   List<String> _menuList = [
-    'safearea'
+    'safearea',
+    'expanded'
   ];
 
   @override
