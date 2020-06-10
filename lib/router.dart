@@ -1,5 +1,6 @@
 
 import 'package:bootcodefluttertemplate/_01_safearea/safearea.dart';
+import 'package:bootcodefluttertemplate/_04_animated_container/animated_container.dart';
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
 
@@ -12,6 +13,7 @@ class FluroRouter {
   static Handler _safeAreaHandler = Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) => SafeAreaPage());
   static Handler _expandedAreaHandler = Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) => ExpandedPage());
   static Handler _wrapAreaHandler = Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) => WrapPage());
+  static Handler _animatedContainerAreaHandler = Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) => AnimatedContainerPage());
 
   static void setupRouter() {
     router.define(
@@ -29,6 +31,12 @@ class FluroRouter {
     router.define(
       'wrap',
       handler: _wrapAreaHandler,
+      transitionType: TransitionType.material,
+    );
+
+    router.define(
+      'animated_container',
+      handler: _animatedContainerAreaHandler,
       transitionType: TransitionType.material,
     );
   }
