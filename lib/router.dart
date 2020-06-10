@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 
 import '_02_expanded/expanded.dart';
 import '_03_wrap/wrap.dart';
+import '_05_opacity/opacity.dart';
 import 'home.dart';
 
 class FluroRouter {
@@ -14,6 +15,7 @@ class FluroRouter {
   static Handler _expandedAreaHandler = Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) => ExpandedPage());
   static Handler _wrapAreaHandler = Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) => WrapPage());
   static Handler _animatedContainerAreaHandler = Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) => AnimatedContainerPage());
+  static Handler _opacityHandler = Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) => OpacityPage());
 
   static void setupRouter() {
     router.define(
@@ -37,6 +39,12 @@ class FluroRouter {
     router.define(
       'animated_container',
       handler: _animatedContainerAreaHandler,
+      transitionType: TransitionType.material,
+    );
+
+    router.define(
+      'opacity',
+      handler: _opacityHandler,
       transitionType: TransitionType.material,
     );
   }
