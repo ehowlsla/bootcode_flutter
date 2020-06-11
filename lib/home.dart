@@ -13,6 +13,7 @@ class HomePageState extends State<HomePage> {
     'wrap',
     'animated_container',
     'opacity',
+    'future_builder',
   ];
 
   @override
