@@ -14,6 +14,7 @@ class HomePageState extends State<HomePage> {
     'animated_container',
     'opacity',
     'future_builder',
+    'fade_transition',
   ];
 
   @override
