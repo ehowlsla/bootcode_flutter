@@ -9,6 +9,7 @@ import '_03_wrap/wrap.dart';
 import '_05_opacity/opacity.dart';
 import '_06_future_builder/future_builder.dart';
 import '_07_fade_transition/fade_transition.dart';
+import '_08_fab/fab.dart';
 
 
 class FluroRouter {
@@ -20,6 +21,7 @@ class FluroRouter {
   static Handler _opacityHandler = Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) => OpacityPage());
   static Handler _futureBuilderHandler = Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) => FutureBuilderPage());
   static Handler _fadeTransitionHandler = Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) => FadeTransitionPage());
+  static Handler _fabHandler = Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) => FabPage());
 
   static void setupRouter() {
     router.define(
@@ -61,6 +63,12 @@ class FluroRouter {
     router.define(
       'fade_transition',
       handler: _fadeTransitionHandler,
+      transitionType: TransitionType.material,
+    );
+
+    router.define(
+      'fab',
+      handler: _fabHandler,
       transitionType: TransitionType.material,
     );
   }
