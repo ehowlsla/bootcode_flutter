@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
 class PageViewPage extends StatefulWidget {
   @override
@@ -14,6 +15,7 @@ class PageViewState extends State<PageViewPage> {
         backgroundColor: Colors.redAccent,
       ),
       body: PageView(
+//        scrollDirection: Axis.vertical,
         children: <Widget>[
           Container(
             color: Colors.amber,
