@@ -9,7 +9,7 @@ class FabPageState extends State<FabPage> {
 
   int _index = 0;
   List<FloatingActionButtonLocation> _fabLocations = [
-    FloatingActionButtonLocation.startDocked,
+    FloatingActionButtonLocation.startTop,
     FloatingActionButtonLocation.centerDocked,
     FloatingActionButtonLocation.endDocked,
   ];
