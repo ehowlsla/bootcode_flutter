@@ -11,6 +11,7 @@ import '_06_future_builder/future_builder.dart';
 import '_07_fade_transition/fade_transition.dart';
 import '_08_fab/fab.dart';
 import '_09_pageview/pageview.dart';
+import '_10_table/table.dart';
 
 
 class FluroRouter {
@@ -24,6 +25,7 @@ class FluroRouter {
   static Handler _fadeTransitionHandler = Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) => FadeTransitionPage());
   static Handler _fabHandler = Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) => FabPage());
   static Handler _pageViewHandler = Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) => PageViewPage());
+  static Handler _tableHandler = Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) => TablePage());
 
   static void setupRouter() {
     router.define(
@@ -77,6 +79,12 @@ class FluroRouter {
     router.define(
       'page_view',
       handler: _pageViewHandler,
+      transitionType: TransitionType.material,
+    );
+
+    router.define(
+      'table',
+      handler: _tableHandler,
       transitionType: TransitionType.material,
     );
   }

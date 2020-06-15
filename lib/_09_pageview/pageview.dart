@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 
 class PageViewPage extends StatefulWidget {
   @override
@@ -11,7 +10,7 @@ class PageViewState extends State<PageViewPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('08. PageView'),
+        title: Text('09. PageView'),
         backgroundColor: Colors.redAccent,
       ),
       body: PageView(
@@ -28,7 +27,6 @@ class PageViewState extends State<PageViewPage> {
           ),
         ],
       ),
-
     );
   }
 

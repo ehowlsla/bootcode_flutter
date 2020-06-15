@@ -18,7 +18,7 @@ class FabPageState extends State<FabPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('07. Fab'),
+        title: Text('08. Fab'),
         backgroundColor: Colors.redAccent,
       ),
       body: Container(),

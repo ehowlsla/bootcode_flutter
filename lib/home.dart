@@ -17,6 +17,7 @@ class HomePageState extends State<HomePage> {
     'fade_transition',
     'fab',
     'page_view',
+    'table',
   ];
 
   @override
