@@ -12,6 +12,7 @@ import '_07_fade_transition/fade_transition.dart';
 import '_08_fab/fab.dart';
 import '_09_pageview/pageview.dart';
 import '_10_table/table.dart';
+import '_11_sliver_app_bar/siliver_app_bar.dart';
 
 
 class FluroRouter {
@@ -26,6 +27,8 @@ class FluroRouter {
   static Handler _fabHandler = Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) => FabPage());
   static Handler _pageViewHandler = Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) => PageViewPage());
   static Handler _tableHandler = Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) => TablePage());
+  static Handler _sliverAppHandler = Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) => SliverAppBarPage());
+
 
   static void setupRouter() {
     router.define(
@@ -85,6 +88,12 @@ class FluroRouter {
     router.define(
       'table',
       handler: _tableHandler,
+      transitionType: TransitionType.material,
+    );
+
+    router.define(
+      'sliver_app_bar',
+      handler: _sliverAppHandler,
       transitionType: TransitionType.material,
     );
   }
