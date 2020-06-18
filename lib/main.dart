@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: '겜스토어',
+      title: 'Flutter Example Templates',
 //      locale: Locale.,
       theme: ThemeData(
         primaryColor: Colors.white,

@@ -13,6 +13,7 @@ import '_08_fab/fab.dart';
 import '_09_pageview/pageview.dart';
 import '_10_table/table.dart';
 import '_11_sliver_app_bar/siliver_app_bar.dart';
+import '_12_sliver_list_grid/siliver_list_grid.dart';
 
 
 class FluroRouter {
@@ -28,6 +29,7 @@ class FluroRouter {
   static Handler _pageViewHandler = Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) => PageViewPage());
   static Handler _tableHandler = Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) => TablePage());
   static Handler _sliverAppHandler = Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) => SliverAppBarPage());
+  static Handler _sliverListGridAppHandler = Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) => SliverListGridPage());
 
 
   static void setupRouter() {
@@ -94,6 +96,12 @@ class FluroRouter {
     router.define(
       'sliver_app_bar',
       handler: _sliverAppHandler,
+      transitionType: TransitionType.material,
+    );
+
+    router.define(
+      'sliver_list_grid',
+      handler: _sliverListGridAppHandler,
       transitionType: TransitionType.material,
     );
   }

@@ -19,6 +19,7 @@ class HomePageState extends State<HomePage> {
     'page_view',
     'table',
     'sliver_app_bar',
+    'sliver_list_grid',
   ];
 
   @override
