@@ -20,6 +20,7 @@ class HomePageState extends State<HomePage> {
     'table',
     'sliver_app_bar',
     'sliver_list_grid',
+    'fade_in_image',
   ];
 
   @override

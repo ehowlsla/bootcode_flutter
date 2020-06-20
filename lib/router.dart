@@ -14,6 +14,7 @@ import '_09_pageview/pageview.dart';
 import '_10_table/table.dart';
 import '_11_sliver_app_bar/siliver_app_bar.dart';
 import '_12_sliver_list_grid/siliver_list_grid.dart';
+import '_13_fade_in_image/fade_in_image.dart';
 
 
 class FluroRouter {
@@ -30,6 +31,7 @@ class FluroRouter {
   static Handler _tableHandler = Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) => TablePage());
   static Handler _sliverAppHandler = Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) => SliverAppBarPage());
   static Handler _sliverListGridAppHandler = Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) => SliverListGridPage());
+  static Handler _fadeInImageHandler = Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) => FadeInImagePage());
 
 
   static void setupRouter() {
@@ -104,5 +106,12 @@ class FluroRouter {
       handler: _sliverListGridAppHandler,
       transitionType: TransitionType.material,
     );
+
+    router.define(
+      'fade_in_image',
+      handler: _fadeInImageHandler,
+      transitionType: TransitionType.material,
+    );
+
   }
 }
