@@ -21,6 +21,7 @@ class HomePageState extends State<HomePage> {
     'sliver_app_bar',
     'sliver_list_grid',
     'fade_in_image',
+    'stream_builder',
   ];
 
   @override
